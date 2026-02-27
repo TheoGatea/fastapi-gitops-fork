@@ -49,6 +49,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Build and push the image
         run : |
-          docker login --username theogatea --password ${{ secrets.GH_PASSWORD }} ghcr.io
+          docker login --username theogatea --password ${{ secrets.GH_PAT }} ghcr.io
           docker build -t ghcr.io/theogatea/actions-runner-controller:latest .
           docker push ghcr.io/theogatea/actions-runner-controller:latest
